@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Agenda et prochains événements de la Cellule Exousia — Strasbourg." />
+  <title>Événements — Cellule Exousia</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { DEFAULT: '#0B1829', light: '#112236', deep: '#070F1A' },
+            gold:  { DEFAULT: '#D4AC60', light: '#E2C27C', dark: '#B8933F', faint: 'rgba(212,172,96,0.12)' },
+            cream: { DEFAULT: '#F8F4EE', dark: '#EDE8DF' },
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans:  ['Outfit', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="bg-cream text-navy antialiased">
+
+<!-- ══════════════════════════════ NAVIGATION ══════════════════════════════ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <nav class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-serif text-lg font-semibold text-gold tracking-wide hover:opacity-80 transition-opacity">✦ Exousia</a>
+    <ul class="hidden md:flex items-center gap-8">
+      <li><a href="vision.html"      class="nav-link" data-page="vision.html">Vision</a></li>
+      <li><a href="evenements.html"  class="nav-link" data-page="evenements.html">Événements</a></li>
+      <li><a href="ressources.html"  class="nav-link" data-page="ressources.html">Ressources</a></li>
+      <li><a href="contact.html"     class="nav-link" data-page="contact.html">Contact</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:inline-block bg-gold text-navy text-sm font-medium px-5 py-2 rounded-full hover:bg-gold-light transition-colors">Rejoindre</a>
+      <button id="burger" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Menu">
+        <span class="block w-5 h-0.5 bg-white transition-all"></span>
+        <span class="block w-5 h-0.5 bg-white transition-all"></span>
+        <span class="block w-5 h-0.5 bg-white transition-all"></span>
+      </button>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10 px-6 py-4">
+    <ul class="flex flex-col gap-4">
+      <li><a href="vision.html"     class="nav-link block" data-page="vision.html"     onclick="closeMobileMenu()">Vision</a></li>
+      <li><a href="evenements.html" class="nav-link block" data-page="evenements.html" onclick="closeMobileMenu()">Événements</a></li>
+      <li><a href="ressources.html" class="nav-link block" data-page="ressources.html" onclick="closeMobileMenu()">Ressources</a></li>
+      <li><a href="contact.html"    class="nav-link block" data-page="contact.html"    onclick="closeMobileMenu()">Contact</a></li>
+      <li><a href="contact.html" class="inline-block bg-gold text-navy text-sm font-medium px-5 py-2 rounded-full">Rejoindre</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ══════════════════════════════ HERO PAGE ══════════════════════════════ -->
+<section class="page-hero page-cross">
+  <div class="max-w-3xl mx-auto fade-up">
+    <div class="inline-flex items-center gap-2 border border-gold/40 text-gold text-xs tracking-widest uppercase px-4 py-1.5 rounded-full mb-8">
+      <span class="w-1 h-1 rounded-full bg-gold inline-block"></span>
+      Agenda
+    </div>
+    <h1 class="font-serif text-5xl md:text-6xl font-semibold text-white leading-tight mb-5">
+      Nos <em class="text-gold not-italic">Événements</em>
+    </h1>
+    <p class="text-white/50 font-light max-w-xl mx-auto">
+      Réunions hebdomadaires, soirées d'adoration, retraites — rejoins-nous là où tu te sens appelé.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ ÉVÉNEMENTS ══════════════════════════════ -->
+<section class="py-20 px-6 bg-cream">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Réguliers -->
+    <div class="mb-14">
+      <div class="fade-up mb-8">
+        <p class="section-label"><span class="gold-line"></span>Récurrents</p>
+        <h2 class="font-serif text-3xl font-semibold text-navy">Chaque semaine</h2>
+      </div>
+
+      <div class="bg-white border border-navy/8 rounded-2xl overflow-hidden fade-up">
+        <div class="bg-navy px-8 py-5 flex items-center gap-4">
+          <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+            </svg>
+          </div>
+          <div>
+            <p class="text-white font-medium text-sm">Réunion hebdomadaire de cellule</p>
+            <p class="text-white/40 text-xs">Chaque samedi · 19h30</p>
+          </div>
+          <span class="ml-auto badge">Régulier</span>
+        </div>
+        <div class="px-8 py-6">
+          <p class="text-navy/65 font-light text-sm leading-relaxed mb-4">
+            Le cœur de la cellule : étude de la Parole, prière collective, partage et communion fraternelle. Ouvert à tous, membres et visiteurs.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <div class="flex items-center gap-2 text-xs text-navy/50">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Lieu de la cellule, Strasbourg
+            </div>
+            <div class="flex items-center gap-2 text-xs text-navy/50">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Durée : environ 2h
+            </div>
+            <div class="flex items-center gap-2 text-xs text-navy/50">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Ouvert à tous
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Prochains événements spéciaux -->
+    <div class="fade-up mb-8">
+      <p class="section-label"><span class="gold-line"></span>À venir</p>
+      <h2 class="font-serif text-3xl font-semibold text-navy">Événements spéciaux</h2>
+    </div>
+
+    <div class="space-y-5">
+
+      <!-- Événement 1 -->
+      <div class="pillar-card bg-white border border-navy/8 rounded-2xl p-6 flex gap-6 fade-up">
+        <div class="shrink-0 flex flex-col items-center justify-center w-16 h-16 rounded-xl bg-gold-faint">
+          <span class="font-serif text-2xl font-semibold text-gold leading-none">14</span>
+          <span class="text-gold/60 text-xs uppercase tracking-wide">Juin</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <h3 class="font-medium text-navy">Soirée d'adoration</h3>
+            <span class="badge shrink-0">Spécial</span>
+          </div>
+          <p class="text-navy/50 text-xs mb-3">Vendredi 14 Juin · 20h00 · Salle principale</p>
+          <p class="text-navy/65 text-sm font-light leading-relaxed">
+            Une soirée entièrement consacrée à l'adoration, à la louange et à la présence de Dieu. Viens avec ton cœur ouvert.
+          </p>
+        </div>
+      </div>
+
+      <!-- Événement 2 -->
+      <div class="pillar-card bg-white border border-navy/8 rounded-2xl p-6 flex gap-6 fade-up" style="transition-delay:0.1s">
+        <div class="shrink-0 flex flex-col items-center justify-center w-16 h-16 rounded-xl bg-gold-faint">
+          <span class="font-serif text-2xl font-semibold text-gold leading-none">28</span>
+          <span class="text-gold/60 text-xs uppercase tracking-wide">Juin</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <h3 class="font-medium text-navy">Retraite jeunes adultes</h3>
+            <span class="badge" style="background:rgba(11,24,41,0.07);color:#0B1829">Nouveau</span>
+          </div>
+          <p class="text-navy/50 text-xs mb-3">Weekend du 28–30 Juin · Destination TBD</p>
+          <p class="text-navy/65 text-sm font-light leading-relaxed">
+            Un weekend de ressourcement, d'enseignements approfondis, de prière et de fraternité loin de l'agitation de la ville.
+          </p>
+        </div>
+      </div>
+
+      <!-- Événement 3 -->
+      <div class="pillar-card bg-navy border border-gold/20 rounded-2xl p-6 flex gap-6 fade-up" style="transition-delay:0.15s">
+        <div class="shrink-0 flex flex-col items-center justify-center w-16 h-16 rounded-xl bg-gold/10">
+          <span class="font-serif text-2xl font-semibold text-gold leading-none">19</span>
+          <span class="text-gold/50 text-xs uppercase tracking-wide">Juil</span>
+        </div>
+        <div class="flex-1">
+          <div class="flex items-start justify-between gap-2 mb-2">
+            <h3 class="font-medium text-white">Nuit de prière</h3>
+            <span class="badge">Spécial</span>
+          </div>
+          <p class="text-white/40 text-xs mb-3">Vendredi 19 Juillet · 22h00 → 6h00</p>
+          <p class="text-white/55 text-sm font-light leading-relaxed">
+            Une nuit pour intercéder pour notre ville, notre pays, nos familles. Pour ceux qui veulent aller plus loin dans la vie de prière.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ CTA ══════════════════════════════ -->
+<section class="py-16 px-6 bg-navy text-center fade-up">
+  <div class="max-w-xl mx-auto">
+    <h2 class="font-serif text-3xl font-semibold text-white mb-3">Ne manque aucun événement</h2>
+    <p class="text-white/45 font-light mb-8">Laisse-nous ton email — on t'informe en avant-première.</p>
+    <a href="contact.html" class="btn-primary">Recevoir les annonces</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+<footer class="bg-navy-deep pt-12 pb-8 px-6 border-t border-white/8">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <div>
+      <p class="font-serif text-xl text-gold mb-1">✦ Exousia</p>
+      <p class="text-white/30 text-xs">Cellule chrétienne d'impact · Strasbourg</p>
+    </div>
+    <nav class="flex gap-6">
+      <a href="vision.html"      class="text-white/40 text-xs hover:text-gold transition-colors">Vision</a>
+      <a href="evenements.html"  class="text-white/40 text-xs hover:text-gold transition-colors">Événements</a>
+      <a href="ressources.html"  class="text-white/40 text-xs hover:text-gold transition-colors">Ressources</a>
+      <a href="contact.html"     class="text-white/40 text-xs hover:text-gold transition-colors">Contact</a>
+    </nav>
+    <p class="text-white/20 text-xs">© 2025 Cellule Exousia · Luc 10:19</p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

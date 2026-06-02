@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Notre vision, mission et valeurs — Cellule Exousia, Strasbourg." />
+  <title>Vision & Identité — Cellule Exousia</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:  { DEFAULT: '#0B1829', light: '#112236', deep: '#070F1A' },
+            gold:  { DEFAULT: '#D4AC60', light: '#E2C27C', dark: '#B8933F', faint: 'rgba(212,172,96,0.12)' },
+            cream: { DEFAULT: '#F8F4EE', dark: '#EDE8DF' },
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans:  ['Outfit', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body class="bg-cream text-navy antialiased">
+
+<!-- ══════════════════════════════ NAVIGATION ══════════════════════════════ -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+  <nav class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
+    <a href="index.html" class="font-serif text-lg font-semibold text-gold tracking-wide hover:opacity-80 transition-opacity">✦ Exousia</a>
+    <ul class="hidden md:flex items-center gap-8">
+      <li><a href="vision.html"      class="nav-link" data-page="vision.html">Vision</a></li>
+      <li><a href="evenements.html"  class="nav-link" data-page="evenements.html">Événements</a></li>
+      <li><a href="ressources.html"  class="nav-link" data-page="ressources.html">Ressources</a></li>
+      <li><a href="contact.html"     class="nav-link" data-page="contact.html">Contact</a></li>
+    </ul>
+    <div class="flex items-center gap-4">
+      <a href="contact.html" class="hidden md:inline-block bg-gold text-navy text-sm font-medium px-5 py-2 rounded-full hover:bg-gold-light transition-colors">Rejoindre</a>
+      <button id="burger" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Menu">
+        <span class="block w-5 h-0.5 bg-white transition-all"></span>
+        <span class="block w-5 h-0.5 bg-white transition-all"></span>
+        <span class="block w-5 h-0.5 bg-white transition-all"></span>
+      </button>
+    </div>
+  </nav>
+  <div id="mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10 px-6 py-4">
+    <ul class="flex flex-col gap-4">
+      <li><a href="vision.html"     class="nav-link block" data-page="vision.html"     onclick="closeMobileMenu()">Vision</a></li>
+      <li><a href="evenements.html" class="nav-link block" data-page="evenements.html" onclick="closeMobileMenu()">Événements</a></li>
+      <li><a href="ressources.html" class="nav-link block" data-page="ressources.html" onclick="closeMobileMenu()">Ressources</a></li>
+      <li><a href="contact.html"    class="nav-link block" data-page="contact.html"    onclick="closeMobileMenu()">Contact</a></li>
+      <li><a href="contact.html" class="inline-block bg-gold text-navy text-sm font-medium px-5 py-2 rounded-full">Rejoindre</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ══════════════════════════════ HERO PAGE ══════════════════════════════ -->
+<section class="page-hero page-cross">
+  <div class="max-w-3xl mx-auto fade-up">
+    <div class="inline-flex items-center gap-2 border border-gold/40 text-gold text-xs tracking-widest uppercase px-4 py-1.5 rounded-full mb-8">
+      <span class="w-1 h-1 rounded-full bg-gold inline-block"></span>
+      Notre identité
+    </div>
+    <h1 class="font-serif text-5xl md:text-6xl font-semibold text-white leading-tight mb-5">
+      Vision &<br/><em class="text-gold not-italic">Identité</em>
+    </h1>
+    <p class="text-white/50 font-light max-w-xl mx-auto">
+      Comprendre qui nous sommes, d'où nous venons, et vers quoi nous marchons ensemble.
+    </p>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ QUI SOMMES-NOUS ══════════════════════════════ -->
+<section class="py-20 px-6 bg-cream">
+  <div class="max-w-4xl mx-auto">
+    <div class="fade-up mb-14">
+      <p class="section-label"><span class="gold-line"></span>Le nom</p>
+      <h2 class="font-serif text-4xl font-semibold text-navy mb-5">Pourquoi « Exousia » ?</h2>
+      <p class="text-navy/65 font-light leading-relaxed text-lg max-w-2xl">
+        <em>Exousia</em> (ἐξουσία) est un terme grec du Nouveau Testament qui signifie <strong class="font-medium text-navy">autorité, pouvoir délégué</strong>. Ce n'est pas une puissance arrachée, mais donnée par Christ à ceux qui lui appartiennent.
+      </p>
+    </div>
+
+    <div class="gold-quote fade-up mb-12">
+      <p class="font-serif text-2xl italic text-navy/80 leading-relaxed mb-2">
+        « Voici, je vous ai donné le pouvoir (exousia) de fouler aux pieds serpents et scorpions, et toute la puissance de l'ennemi ; et rien ne pourra vous nuire. »
+      </p>
+      <cite class="text-gold text-sm not-italic font-medium">— Luc 10:19, verset fondateur</cite>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ VISION / MISSION / VALEURS ══════════════════════════════ -->
+<section class="py-20 px-6 bg-cream-dark">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14 fade-up">
+      <p class="section-label justify-center"><span class="gold-line"></span>Notre boussole</p>
+      <h2 class="font-serif text-4xl font-semibold text-navy">Vision · Mission · Valeurs</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Vision -->
+      <div class="pillar-card bg-white border border-navy/8 rounded-2xl p-8 fade-up">
+        <div class="w-12 h-12 rounded-xl bg-gold-faint flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+          </svg>
+        </div>
+        <h3 class="font-serif text-xl font-semibold text-navy mb-3">Notre Vision</h3>
+        <p class="text-navy/60 font-light leading-relaxed text-sm">
+          Voir une génération de jeunes adultes ancrée dans la Parole de Dieu, transformée de l'intérieur, et rayonnant l'autorité de Christ dans chaque sphère de leur vie : famille, travail, société.
+        </p>
+      </div>
+
+      <!-- Mission -->
+      <div class="pillar-card bg-navy border border-gold/20 rounded-2xl p-8 fade-up" style="transition-delay:0.1s">
+        <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+        </div>
+        <h3 class="font-serif text-xl font-semibold text-gold mb-3">Notre Mission</h3>
+        <p class="text-white/60 font-light leading-relaxed text-sm">
+          Rassembler des jeunes adultes chaque semaine pour étudier la Parole, prier ensemble, grandir dans la foi et se porter les uns les fardeaux des autres — en accord avec Galates 6:2.
+        </p>
+      </div>
+
+      <!-- Valeurs -->
+      <div class="pillar-card bg-white border border-navy/8 rounded-2xl p-8 fade-up" style="transition-delay:0.2s">
+        <div class="w-12 h-12 rounded-xl bg-gold-faint flex items-center justify-center mb-6">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h3 class="font-serif text-xl font-semibold text-navy mb-3">Nos Valeurs</h3>
+        <ul class="text-navy/60 font-light text-sm space-y-2">
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Ancrage dans la Parole</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Prière et dépendance à l'Esprit</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Fraternité authentique</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Excellence et humilité</li>
+          <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-gold shrink-0"></span>Impact missionnaire</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ HISTOIRE ══════════════════════════════ -->
+<section class="py-20 px-6 bg-cream">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12 fade-up">
+      <p class="section-label justify-center"><span class="gold-line"></span>Notre histoire</p>
+      <h2 class="font-serif text-4xl font-semibold text-navy">D'où nous venons</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-10 items-center fade-up">
+      <div>
+        <p class="text-navy/65 font-light leading-relaxed mb-4">
+          Exousia est née d'une conviction simple : les jeunes adultes ont besoin d'un espace où la foi n'est pas édulcorée, où la Parole de Dieu est enseignée avec profondeur, et où la communauté est réelle.
+        </p>
+        <p class="text-navy/65 font-light leading-relaxed mb-4">
+          Fondée à Strasbourg, la cellule réunit chaque semaine des jeunes adultes qui veulent aller plus loin dans leur relation avec Christ — au-delà du dimanche matin.
+        </p>
+        <p class="text-navy/65 font-light leading-relaxed">
+          Cinq ans après les débuts, la vision reste la même : marcher dans l'autorité de Christ, ensemble.
+        </p>
+      </div>
+      <div class="bg-navy rounded-2xl p-8 border border-gold/15">
+        <div class="space-y-6">
+          <div class="flex items-start gap-4">
+            <span class="font-serif text-gold text-2xl font-semibold shrink-0 leading-none">01</span>
+            <div><p class="font-medium text-white text-sm mb-1">Les premières réunions</p><p class="text-white/45 text-xs font-light">Un petit groupe, une grande foi. Les fondations sont posées.</p></div>
+          </div>
+          <div class="h-px bg-white/8"></div>
+          <div class="flex items-start gap-4">
+            <span class="font-serif text-gold text-2xl font-semibold shrink-0 leading-none">02</span>
+            <div><p class="font-medium text-white text-sm mb-1">La croissance</p><p class="text-white/45 text-xs font-light">Des membres rejoignent. La communauté prend forme autour de la Parole.</p></div>
+          </div>
+          <div class="h-px bg-white/8"></div>
+          <div class="flex items-start gap-4">
+            <span class="font-serif text-gold text-2xl font-semibold shrink-0 leading-none">03</span>
+            <div><p class="font-medium text-white text-sm mb-1">Aujourd'hui</p><p class="text-white/45 text-xs font-light">30+ membres actifs, un programme hebdomadaire, des événements réguliers.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ CTA ══════════════════════════════ -->
+<section class="py-16 px-6 bg-navy text-center fade-up">
+  <div class="max-w-xl mx-auto">
+    <h2 class="font-serif text-3xl font-semibold text-white mb-3">Tu partages cette vision ?</h2>
+    <p class="text-white/45 font-light mb-8">Rejoins la cellule — la porte est ouverte.</p>
+    <a href="contact.html" class="btn-primary">Nous contacter</a>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+<footer class="bg-navy-deep pt-12 pb-8 px-6 border-t border-white/8">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <div>
+      <p class="font-serif text-xl text-gold mb-1">✦ Exousia</p>
+      <p class="text-white/30 text-xs">Cellule chrétienne d'impact · Strasbourg</p>
+    </div>
+    <nav class="flex gap-6">
+      <a href="vision.html"      class="text-white/40 text-xs hover:text-gold transition-colors">Vision</a>
+      <a href="evenements.html"  class="text-white/40 text-xs hover:text-gold transition-colors">Événements</a>
+      <a href="ressources.html"  class="text-white/40 text-xs hover:text-gold transition-colors">Ressources</a>
+      <a href="contact.html"     class="text-white/40 text-xs hover:text-gold transition-colors">Contact</a>
+    </nav>
+    <p class="text-white/20 text-xs">© 2025 Cellule Exousia · Luc 10:19</p>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

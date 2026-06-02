@@ -1,0 +1,198 @@
+
+    body { font-family: 'Outfit', sans-serif; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    /* Scrollbar discrète */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #0B1829; }
+    ::-webkit-scrollbar-thumb { background: #D4AC60; border-radius: 2px; }
+
+    /* Filligrane croix hero */
+    .hero-cross::before {
+      content: '✝';
+      position: absolute;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 320px;
+      color: rgba(212,172,96,0.04);
+      top: -40px; right: -20px;
+      line-height: 1;
+      pointer-events: none;
+    }
+    body { font-family: 'Outfit', sans-serif; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    /* Scrollbar discrète */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #0B1829; }
+    ::-webkit-scrollbar-thumb { background: #D4AC60; border-radius: 2px; }
+
+    /* Filligrane croix hero */
+    .hero-cross::before {
+      content: '✝';
+      position: absolute;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 320px;
+      color: rgba(212,172,96,0.04);
+      top: -40px; right: -20px;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Ligne dorée décorative */
+    .gold-line {
+      display: inline-block;
+      width: 40px; height: 1.5px;
+      background: #D4AC60;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    /* Animation fade-up au scroll */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Nav link hover */
+    .nav-link {
+      position: relative;
+      color: rgba(255,255,255,0.65);
+      font-size: 14px;
+      font-weight: 300;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1px;
+      background: #D4AC60;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: #D4AC60; }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Pill badge */
+    .badge {
+      display: inline-block;
+      background: rgba(212,172,96,0.12);
+      color: #B8933F;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 10px;
+      border-radius: 50px;
+    }
+
+    /* Card hover */
+    .pillar-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(212,172,96,0.08);
+    }
+
+    /* Input focus */
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #D4AC60;
+      box-shadow: 0 0 0 2px rgba(212,172,96,0.15);
+    }
+  
+    body { font-family: 'Outfit', sans-serif; }
+    .font-serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+    /* Scrollbar discrète */
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: #0B1829; }
+    ::-webkit-scrollbar-thumb { background: #D4AC60; border-radius: 2px; }
+
+    /* Filligrane croix hero */
+    .hero-cross::before {
+      content: '✝';
+      position: absolute;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 320px;
+      color: rgba(212,172,96,0.04);
+      top: -40px; right: -20px;
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* Ligne dorée décorative */
+    .gold-line {
+      display: inline-block;
+      width: 40px; height: 1.5px;
+      background: #D4AC60;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    /* Animation fade-up au scroll */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Nav link hover */
+    .nav-link {
+      position: relative;
+      color: rgba(255,255,255,0.65);
+      font-size: 14px;
+      font-weight: 300;
+      transition: color 0.2s;
+    }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -2px; left: 0;
+      width: 0; height: 1px;
+      background: #D4AC60;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover { color: #D4AC60; }
+    .nav-link:hover::after { width: 100%; }
+
+    /* Pill badge */
+    .badge {
+      display: inline-block;
+      background: rgba(212,172,96,0.12);
+      color: #B8933F;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 2px 10px;
+      border-radius: 50px;
+    }
+
+    /* Card hover */
+    .pillar-card {
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .pillar-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 32px rgba(212,172,96,0.08);
+    }
+
+    /* Input focus */
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #D4AC60;
+      box-shadow: 0 0 0 2px rgba(212,172,96,0.15);
+    }
+  
