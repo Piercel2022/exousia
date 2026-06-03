@@ -6,18 +6,12 @@
   <meta name="description" content="Cellule Exousia — Une communauté chrétienne d'impact à Strasbourg. Marcher dans l'autorité de Christ. Luc 10:19." />
   <meta property="og:title" content="Cellule Exousia" />
   <meta property="og:description" content="Une génération ancrée dans la Parole, marchant avec autorité." />
-  <meta property="og:image" content="/images/og-cover.jpg" />
   <title>Cellule Exousia — Luc 10:19</title>
 
-  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-  <!-- Tailwind config -->
   <script>
     tailwind.config = {
       theme: {
@@ -35,573 +29,350 @@
       }
     }
   </script>
-
-  <!-- CSS partagé -->
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body class="bg-cream text-navy antialiased">
 
-<!-- ═══════════════════════════════════════
-     NAVIGATION FIXE
-════════════════════════════════════════ -->
+<!-- ══════════════════════════════ NAVIGATION ══════════════════════════════ -->
 <header id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
   <nav class="mx-auto max-w-6xl px-6 py-4 flex items-center justify-between">
-
-    <!-- Logo -->
-    <a href="#hero" class="flex items-center gap-2 group">
-      <span class="text-gold text-lg font-serif font-semibold tracking-wide group-hover:opacity-80 transition-opacity">✦ Exousia</span>
-    </a>
-
-    <!-- Liens desktop -->
+    <a href="index.html" class="font-serif text-lg font-semibold text-gold tracking-wide hover:opacity-80 transition-opacity">✦ Exousia</a>
     <ul class="hidden md:flex items-center gap-8">
       <li><a href="vision.html"      class="nav-link" data-page="vision.html">Vision</a></li>
       <li><a href="evenements.html"  class="nav-link" data-page="evenements.html">Événements</a></li>
       <li><a href="ressources.html"  class="nav-link" data-page="ressources.html">Ressources</a></li>
       <li><a href="contact.html"     class="nav-link" data-page="contact.html">Contact</a></li>
     </ul>
-
-    <!-- CTA + burger -->
     <div class="flex items-center gap-4">
-      <a href="contact.html" class="hidden md:inline-block bg-gold text-navy text-sm font-medium px-5 py-2 rounded-full hover:bg-gold-light transition-colors">
-        Rejoindre
-      </a>
-      <!-- Burger mobile -->
+      <a href="contact.html" class="hidden md:inline-block bg-gold text-navy text-sm font-medium px-5 py-2 rounded-full hover:bg-gold-light transition-colors">Rejoindre</a>
       <button id="burger" class="md:hidden flex flex-col gap-1.5 p-1" aria-label="Menu">
-        <span class="burger-bar block w-5 h-0.5 bg-white transition-all"></span>
-        <span class="burger-bar block w-5 h-0.5 bg-white transition-all"></span>
-        <span class="burger-bar block w-5 h-0.5 bg-white transition-all"></span>
+        <span class="block w-5 h-0.5 bg-white transition-all"></span>
+        <span class="block w-5 h-0.5 bg-white transition-all"></span>
+        <span class="block w-5 h-0.5 bg-white transition-all"></span>
       </button>
     </div>
   </nav>
-
-  <!-- Menu mobile déroulant -->
-  <div id="mobile-menu" class="hidden md:hidden bg-navy-light border-t border-white/10 px-6 py-4">
+  <div id="mobile-menu" class="hidden md:hidden bg-navy border-t border-white/10 px-6 py-4">
     <ul class="flex flex-col gap-4">
       <li><a href="vision.html"     class="nav-link block" data-page="vision.html"     onclick="closeMobileMenu()">Vision</a></li>
       <li><a href="evenements.html" class="nav-link block" data-page="evenements.html" onclick="closeMobileMenu()">Événements</a></li>
       <li><a href="ressources.html" class="nav-link block" data-page="ressources.html" onclick="closeMobileMenu()">Ressources</a></li>
       <li><a href="contact.html"    class="nav-link block" data-page="contact.html"    onclick="closeMobileMenu()">Contact</a></li>
-      <li><a href="contact.html" class="inline-block bg-gold text-navy text-sm font-medium px-5 py-2 rounded-full" onclick="closeMobileMenu()">Rejoindre</a></li>
+      <li><a href="contact.html" class="inline-block bg-gold text-navy text-sm font-medium px-5 py-2 rounded-full">Rejoindre</a></li>
     </ul>
   </div>
 </header>
 
-<!-- ═══════════════════════════════════════
-     HERO
-════════════════════════════════════════ -->
-<section id="hero" class="relative bg-navy min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-16 overflow-hidden hero-cross">
+<!-- ══════════════════════════════ HERO ══════════════════════════════ -->
+<section class="relative bg-navy min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-20 overflow-hidden hero-cross">
 
-  <!-- Particules décoratives -->
-  <div class="absolute top-20 left-10 w-1 h-1 rounded-full bg-gold/30"></div>
-  <div class="absolute top-40 right-16 w-1.5 h-1.5 rounded-full bg-gold/20"></div>
-  <div class="absolute bottom-32 left-20 w-1 h-1 rounded-full bg-gold/25"></div>
-  <div class="absolute bottom-20 right-12 w-2 h-2 rounded-full bg-gold/15"></div>
+  <!-- Grille décorative en fond -->
+  <div class="absolute inset-0 opacity-[0.03]" style="background-image: linear-gradient(rgba(212,172,96,1) 1px, transparent 1px), linear-gradient(90deg, rgba(212,172,96,1) 1px, transparent 1px); background-size: 60px 60px;"></div>
 
-  <!-- Ligne dorée horizontale déco -->
-  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent"></div>
+  <!-- Ligne dorée top -->
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/50 to-transparent"></div>
 
-  <div class="relative z-10 max-w-3xl mx-auto fade-up">
+  <!-- Cercles lumineux -->
+  <div class="absolute top-1/3 left-1/4 w-72 h-72 rounded-full bg-gold/5 blur-3xl pointer-events-none"></div>
+  <div class="absolute bottom-1/3 right-1/4 w-64 h-64 rounded-full bg-gold/4 blur-3xl pointer-events-none"></div>
 
-    <!-- Tag -->
-    <div class="inline-flex items-center gap-2 border border-gold/40 text-gold text-xs tracking-widest uppercase px-4 py-1.5 rounded-full mb-8">
-      <span class="w-1 h-1 rounded-full bg-gold inline-block"></span>
+  <!-- Particules -->
+  <div class="absolute top-24 left-12 w-1 h-1 rounded-full bg-gold/40"></div>
+  <div class="absolute top-48 right-20 w-1.5 h-1.5 rounded-full bg-gold/25"></div>
+  <div class="absolute bottom-40 left-24 w-1 h-1 rounded-full bg-gold/30"></div>
+  <div class="absolute bottom-24 right-16 w-2 h-2 rounded-full bg-gold/15"></div>
+  <div class="absolute top-1/2 left-8 w-1 h-1 rounded-full bg-gold/20"></div>
+
+  <div class="relative z-10 max-w-4xl mx-auto fade-up">
+
+    <!-- Tag pill -->
+    <div class="inline-flex items-center gap-2 border border-gold/35 text-gold text-xs tracking-widest uppercase px-4 py-1.5 rounded-full mb-10">
+      <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse inline-block"></span>
       Cellule chrétienne · Strasbourg
     </div>
 
-    <!-- Titre principal -->
-    <h1 class="font-serif text-5xl md:text-7xl font-semibold text-white leading-tight mb-6">
+    <!-- Titre -->
+    <h1 class="font-serif text-6xl md:text-8xl font-semibold text-white leading-[1.05] mb-7">
       Marcher dans<br/>
-      <em class="text-gold not-italic">l'autorité de Christ</em>
+      <em class="text-gold not-italic">l'autorité<br class="md:hidden"/> de Christ</em>
     </h1>
 
-    <!-- Sous-titre -->
-    <p class="text-white/50 text-sm md:text-base font-light mb-4 max-w-xl mx-auto leading-relaxed">
+    <!-- Description -->
+    <p class="text-white/45 text-sm md:text-base font-light mb-5 max-w-lg mx-auto leading-relaxed">
       Une communauté de jeunes adultes ancrée dans la Parole, unie par la foi, appelée à transformer notre génération.
     </p>
 
-    <!-- Verset fondateur -->
-    <p class="font-serif italic text-gold/70 text-sm mb-10">
-      « Je vous ai donné le pouvoir de fouler aux pieds serpents et scorpions… » — Luc 10:19
+    <!-- Verset -->
+    <p class="font-serif italic text-gold/60 text-sm md:text-base mb-12">
+      « Je vous ai donné le pouvoir de fouler aux pieds… » — Luc 10:19
     </p>
 
     <!-- CTAs -->
     <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#contact"
-         class="bg-gold text-navy font-medium text-sm px-8 py-3.5 rounded-full hover:bg-gold-light transition-colors duration-200 w-full sm:w-auto">
+      <a href="contact.html"
+         class="bg-gold text-navy font-semibold text-sm px-9 py-4 rounded-full hover:bg-gold-light transition-colors duration-200 w-full sm:w-auto">
         Rejoindre la cellule
       </a>
-      <a href="#vision"
-         class="border border-white/25 text-white/75 text-sm px-8 py-3.5 rounded-full hover:border-gold/60 hover:text-gold transition-all duration-200 w-full sm:w-auto">
-        Découvrir notre vision
+      <a href="vision.html"
+         class="border border-white/20 text-white/70 text-sm px-9 py-4 rounded-full hover:border-gold/50 hover:text-gold transition-all duration-200 w-full sm:w-auto">
+        Notre vision →
       </a>
     </div>
   </div>
 
   <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-40">
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-35">
     <span class="text-white text-xs tracking-widest uppercase">Défiler</span>
-    <div class="w-px h-8 bg-gold/50 animate-pulse"></div>
+    <div class="w-px h-8 bg-gradient-to-b from-gold/60 to-transparent animate-pulse"></div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     VISION — 3 PILIERS
-════════════════════════════════════════ -->
-<section id="vision" class="py-24 px-6 bg-cream">
-  <div class="max-w-6xl mx-auto">
-
-    <!-- En-tête de section -->
-    <div class="text-center mb-16 fade-up">
-      <p class="text-gold text-xs tracking-widest uppercase mb-3">
-        <span class="gold-line"></span>Notre identité
-      </p>
-      <h2 class="font-serif text-4xl md:text-5xl font-semibold text-navy mb-4">
-        Qui sommes-nous ?
-      </h2>
-      <p class="text-navy/60 font-light max-w-lg mx-auto leading-relaxed">
-        Exousia — du grec ancien, signifie <em>autorité, pouvoir délégué</em>. Nous croyons que Christ nous appelle à exercer cette autorité dans notre vie et notre génération.
-      </p>
-    </div>
-
-    <!-- 3 cartes piliers -->
-    <div class="grid md:grid-cols-3 gap-8">
-
-      <!-- Pilier 1 : Vision -->
-      <div class="pillar-card bg-white border border-navy/8 rounded-2xl p-8 fade-up">
-        <div class="w-12 h-12 rounded-xl bg-gold-faint flex items-center justify-center mb-6">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-            <circle cx="12" cy="12" r="3"/>
-          </svg>
-        </div>
-        <h3 class="font-serif text-xl font-semibold text-navy mb-3">Vision</h3>
-        <p class="text-navy/60 font-light leading-relaxed text-sm">
-          Voir une génération de jeunes adultes ancrée dans la Parole de Dieu, marchant avec l'autorité que Christ leur a confiée — dans leur famille, leur lieu de travail, leur ville.
-        </p>
-        <div class="mt-6 h-px bg-gradient-to-r from-gold/40 to-transparent"></div>
-      </div>
-
-      <!-- Pilier 2 : Communauté -->
-      <div class="pillar-card bg-navy text-white border border-gold/20 rounded-2xl p-8 fade-up" style="transition-delay:0.1s">
-        <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-6">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-            <circle cx="9" cy="7" r="4"/>
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
-            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-          </svg>
-        </div>
-        <h3 class="font-serif text-xl font-semibold text-gold mb-3">Communauté</h3>
-        <p class="text-white/60 font-light leading-relaxed text-sm">
-          Se retrouver chaque semaine pour étudier la Parole, prier ensemble, s'encourager mutuellement et porter les uns les fardeaux des autres — comme le Seigneur l'a ordonné.
-        </p>
-        <div class="mt-6 h-px bg-gradient-to-r from-gold/40 to-transparent"></div>
-      </div>
-
-      <!-- Pilier 3 : Impact -->
-      <div class="pillar-card bg-white border border-navy/8 rounded-2xl p-8 fade-up" style="transition-delay:0.2s">
-        <div class="w-12 h-12 rounded-xl bg-gold-faint flex items-center justify-center mb-6">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <line x1="22" y1="2" x2="11" y2="13"/>
-            <polygon points="22 2 15 22 11 13 2 9 22 2"/>
-          </svg>
-        </div>
-        <h3 class="font-serif text-xl font-semibold text-navy mb-3">Impact</h3>
-        <p class="text-navy/60 font-light leading-relaxed text-sm">
-          Porter la lumière de l'Évangile dans notre ville, nos réseaux et notre génération — avec humilité, excellence et la puissance du Saint-Esprit comme seul moteur.
-        </p>
-        <div class="mt-6 h-px bg-gradient-to-r from-gold/40 to-transparent"></div>
-      </div>
-    </div>
-
-    <!-- Citation clé -->
-    <div class="mt-16 fade-up">
-      <blockquote class="border-l-2 border-gold pl-8 py-2 max-w-2xl mx-auto">
-        <p class="font-serif text-2xl italic text-navy/80 leading-relaxed mb-3">
-          « Voici, je vous ai donné le pouvoir de fouler aux pieds serpents et scorpions, et toute la puissance de l'ennemi ; et rien ne pourra vous nuire. »
-        </p>
-        <footer class="text-gold text-sm font-medium tracking-wide">Luc 10:19 — Verset fondateur d'Exousia</footer>
-      </blockquote>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     STATS BANDE
-════════════════════════════════════════ -->
-<section class="bg-navy py-14 px-6">
-  <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center fade-up">
+<!-- ══════════════════════════════ STATS ══════════════════════════════ -->
+<section class="bg-navy-light border-t border-white/6 py-12 px-6">
+  <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center fade-up">
     <div>
       <p class="font-serif text-4xl font-semibold text-gold mb-1">5+</p>
-      <p class="text-white/40 text-xs uppercase tracking-widest">Années d'existence</p>
+      <p class="text-white/35 text-xs uppercase tracking-widest font-light">Années</p>
     </div>
     <div>
       <p class="font-serif text-4xl font-semibold text-gold mb-1">30+</p>
-      <p class="text-white/40 text-xs uppercase tracking-widest">Membres actifs</p>
+      <p class="text-white/35 text-xs uppercase tracking-widest font-light">Membres actifs</p>
     </div>
     <div>
       <p class="font-serif text-4xl font-semibold text-gold mb-1">52</p>
-      <p class="text-white/40 text-xs uppercase tracking-widest">Réunions / an</p>
+      <p class="text-white/35 text-xs uppercase tracking-widest font-light">Réunions / an</p>
     </div>
     <div>
       <p class="font-serif text-4xl font-semibold text-gold mb-1">∞</p>
-      <p class="text-white/40 text-xs uppercase tracking-widest">Impact éternel</p>
+      <p class="text-white/35 text-xs uppercase tracking-widest font-light">Impact éternel</p>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     ÉVÉNEMENTS
-════════════════════════════════════════ -->
-<section id="evenements" class="py-24 px-6 bg-cream-dark">
+<!-- ══════════════════════════════ NAVIGATION PAGES (3 cartes) ══════════════════════════════ -->
+<section class="py-24 px-6 bg-cream">
   <div class="max-w-6xl mx-auto">
 
     <div class="text-center mb-14 fade-up">
-      <p class="text-gold text-xs tracking-widest uppercase mb-3">
-        <span class="gold-line"></span>Agenda
-      </p>
-      <h2 class="font-serif text-4xl md:text-5xl font-semibold text-navy mb-4">Prochains événements</h2>
-      <p class="text-navy/50 font-light">Rejoins-nous chaque semaine — tu es attendu(e).</p>
+      <p class="section-label justify-center"><span class="gold-line"></span>Explorer le site</p>
+      <h2 class="font-serif text-4xl md:text-5xl font-semibold text-navy">Tout ce qu'Exousia propose</h2>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-6">
+    <div class="grid md:grid-cols-3 gap-7">
 
-      <!-- Événement 1 -->
-      <div class="bg-white border border-navy/8 rounded-2xl p-6 flex gap-5 fade-up hover:shadow-md transition-shadow">
-        <div class="shrink-0 w-14 h-14 rounded-xl bg-gold-faint flex flex-col items-center justify-center">
-          <span class="font-serif text-2xl font-semibold text-gold leading-none">07</span>
-          <span class="text-gold/60 text-xs uppercase tracking-wide">Juin</span>
+      <!-- Vision -->
+      <a href="vision.html" class="pillar-card group bg-white border border-navy/8 rounded-2xl p-8 flex flex-col fade-up">
+        <div class="w-12 h-12 rounded-xl bg-gold-faint flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+          </svg>
         </div>
-        <div class="flex-1">
-          <div class="flex items-start justify-between gap-2 mb-1">
-            <h3 class="font-medium text-navy text-sm">Réunion hebdomadaire de cellule</h3>
-            <span class="badge shrink-0">Régulier</span>
-          </div>
-          <p class="text-navy/50 text-xs mb-2">Samedi · 19h30 · Lieu de la cellule</p>
-          <p class="text-navy/60 text-xs font-light leading-relaxed">Étude de la Parole, prière, partage et communion fraternelle.</p>
+        <h3 class="font-serif text-xl font-semibold text-navy mb-3 group-hover:text-gold transition-colors">Vision & Identité</h3>
+        <p class="text-navy/55 font-light text-sm leading-relaxed flex-1">
+          Découvre qui nous sommes, d'où vient le nom Exousia, notre vision, notre mission et les valeurs qui nous guident.
+        </p>
+        <div class="mt-6 flex items-center gap-2 text-gold text-xs font-medium">
+          En savoir plus
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Événement 2 -->
-      <div class="bg-white border border-navy/8 rounded-2xl p-6 flex gap-5 fade-up hover:shadow-md transition-shadow" style="transition-delay:0.05s">
-        <div class="shrink-0 w-14 h-14 rounded-xl bg-gold-faint flex flex-col items-center justify-center">
-          <span class="font-serif text-2xl font-semibold text-gold leading-none">14</span>
-          <span class="text-gold/60 text-xs uppercase tracking-wide">Juin</span>
+      <!-- Événements -->
+      <a href="evenements.html" class="pillar-card group bg-navy border border-gold/20 rounded-2xl p-8 flex flex-col fade-up" style="transition-delay:0.1s">
+        <div class="w-12 h-12 rounded-xl bg-gold/10 flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
         </div>
-        <div class="flex-1">
-          <div class="flex items-start justify-between gap-2 mb-1">
-            <h3 class="font-medium text-navy text-sm">Soirée d'adoration</h3>
-            <span class="badge">Spécial</span>
-          </div>
-          <p class="text-navy/50 text-xs mb-2">Vendredi · 20h00 · Salle principale</p>
-          <p class="text-navy/60 text-xs font-light leading-relaxed">Une soirée entière consacrée à l'adoration et à la présence de Dieu.</p>
+        <h3 class="font-serif text-xl font-semibold text-gold mb-3">Événements</h3>
+        <p class="text-white/55 font-light text-sm leading-relaxed flex-1">
+          Réunion hebdomadaire, soirées d'adoration, retraites — consulte le calendrier et rejoins-nous là où tu te sens appelé.
+        </p>
+        <div class="mt-6 flex items-center gap-2 text-gold text-xs font-medium">
+          Voir l'agenda
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
         </div>
-      </div>
+      </a>
 
-      <!-- Événement 3 -->
-      <div class="bg-white border border-navy/8 rounded-2xl p-6 flex gap-5 fade-up hover:shadow-md transition-shadow" style="transition-delay:0.1s">
-        <div class="shrink-0 w-14 h-14 rounded-xl bg-gold-faint flex flex-col items-center justify-center">
-          <span class="font-serif text-2xl font-semibold text-gold leading-none">28</span>
-          <span class="text-gold/60 text-xs uppercase tracking-wide">Juin</span>
+      <!-- Ressources -->
+      <a href="ressources.html" class="pillar-card group bg-white border border-navy/8 rounded-2xl p-8 flex flex-col fade-up" style="transition-delay:0.2s">
+        <div class="w-12 h-12 rounded-xl bg-gold-faint flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-colors">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
         </div>
-        <div class="flex-1">
-          <div class="flex items-start justify-between gap-2 mb-1">
-            <h3 class="font-medium text-navy text-sm">Retraite jeunes adultes</h3>
-            <span class="badge" style="background:rgba(11,24,41,0.08);color:#0B1829">Nouveau</span>
-          </div>
-          <p class="text-navy/50 text-xs mb-2">Weekend · 28–30 Juin · Destination TBD</p>
-          <p class="text-navy/60 text-xs font-light leading-relaxed">Un weekend de ressourcement, de prière et de fraternité en dehors de la ville.</p>
+        <h3 class="font-serif text-xl font-semibold text-navy mb-3 group-hover:text-gold transition-colors">Ressources</h3>
+        <p class="text-navy/55 font-light text-sm leading-relaxed flex-1">
+          Télécharge la Rhapsodie des Réalités, des études bibliques et soumets une demande de prière à la cellule.
+        </p>
+        <div class="mt-6 flex items-center gap-2 text-gold text-xs font-medium">
+          Accéder aux ressources
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform">
+            <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+          </svg>
         </div>
-      </div>
-
-      <!-- Événement 4 -->
-      <div class="bg-navy border border-gold/20 rounded-2xl p-6 flex gap-5 fade-up" style="transition-delay:0.15s">
-        <div class="shrink-0 w-14 h-14 rounded-xl bg-gold/10 flex flex-col items-center justify-center">
-          <span class="font-serif text-2xl font-semibold text-gold leading-none">05</span>
-          <span class="text-gold/50 text-xs uppercase tracking-wide">Juil</span>
-        </div>
-        <div class="flex-1">
-          <div class="flex items-start justify-between gap-2 mb-1">
-            <h3 class="font-medium text-white text-sm">Réunion hebdomadaire</h3>
-            <span class="badge">Régulier</span>
-          </div>
-          <p class="text-white/40 text-xs mb-2">Samedi · 19h30 · Lieu de la cellule</p>
-          <p class="text-white/50 text-xs font-light leading-relaxed">Chaque semaine, sans exception — parce que la communauté ne prend pas de vacances.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-10 fade-up">
-      <a href="#contact" class="inline-block border border-navy/20 text-navy text-sm px-7 py-3 rounded-full hover:border-gold hover:text-gold transition-all duration-200">
-        Je souhaite être informé(e) des événements →
       </a>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     RESSOURCES
-════════════════════════════════════════ -->
-<section id="ressources" class="py-24 px-6 bg-cream">
-  <div class="max-w-6xl mx-auto">
+<!-- ══════════════════════════════ PROCHAIN ÉVÉNEMENT ══════════════════════════════ -->
+<section class="py-20 px-6 bg-cream-dark">
+  <div class="max-w-4xl mx-auto fade-up">
 
-    <div class="text-center mb-14 fade-up">
-      <p class="text-gold text-xs tracking-widest uppercase mb-3">
-        <span class="gold-line"></span>Édification
-      </p>
-      <h2 class="font-serif text-4xl md:text-5xl font-semibold text-navy mb-4">Ressources spirituelles</h2>
-      <p class="text-navy/50 font-light">Des contenus pour grandir dans ta foi, même loin de la cellule.</p>
+    <div class="text-center mb-10">
+      <p class="section-label justify-center"><span class="gold-line"></span>À venir</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold text-navy">Prochain rendez-vous</h2>
     </div>
 
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-white border border-navy/8 rounded-3xl overflow-hidden">
+      <div class="flex flex-col md:flex-row">
 
-      <!-- Prédications -->
-      <div class="pillar-card bg-white border border-navy/8 rounded-2xl p-7 fade-up">
-        <div class="w-11 h-11 rounded-xl bg-gold-faint flex items-center justify-center mb-5">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
-            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
-          </svg>
+        <!-- Date bloc -->
+        <div class="md:w-44 shrink-0 bg-navy flex flex-col items-center justify-center py-8 px-6 gap-1">
+          <span class="text-gold/50 text-xs uppercase tracking-widest font-light">Prochain</span>
+          <span class="font-serif text-6xl font-semibold text-gold leading-none">07</span>
+          <span class="text-gold/60 text-sm uppercase tracking-wide">Juin</span>
+          <span class="text-white/30 text-xs mt-1">15h30</span>
         </div>
-        <h3 class="font-serif text-lg font-semibold text-navy mb-2">Prédications</h3>
-        <p class="text-navy/55 text-sm font-light leading-relaxed mb-5">Réécoute les messages enseignés lors de nos réunions. La Parole ne se périme pas.</p>
-        <div class="space-y-2">
-          <div class="flex items-center gap-3 py-2 border-t border-navy/6">
-            <div class="w-7 h-7 rounded-lg bg-gold-faint flex items-center justify-center shrink-0">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#D4AC60"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+
+        <!-- Info -->
+        <div class="flex-1 p-8 flex flex-col justify-between gap-6">
+          <div>
+            <div class="flex items-start justify-between gap-3 mb-3">
+              <h3 class="font-serif text-2xl font-semibold text-navy">Culte globale de communion</h3>
+              <span class="badge shrink-0 mt-1">Régulier</span>
             </div>
-            <div>
-              <p class="text-xs font-medium text-navy">L'autorité du croyant</p>
-              <p class="text-xs text-navy/40">Mai 2025 · 42 min</p>
-            </div>
+            <p class="text-navy/55 text-sm font-light leading-relaxed">
+              Chaque premier dimanche du mois, partage et communion fraternelle. Ouvert à tous — membres et visiteurs. Viens comme tu es.
+            </p>
           </div>
-          <div class="flex items-center gap-3 py-2 border-t border-navy/6">
-            <div class="w-7 h-7 rounded-lg bg-gold-faint flex items-center justify-center shrink-0">
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="#D4AC60"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          <div class="flex flex-wrap items-center gap-4">
+            <div class="flex items-center gap-2 text-navy/45 text-xs">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Strasbourg (adresse sur inscription)
             </div>
-            <div>
-              <p class="text-xs font-medium text-navy">Identité en Christ</p>
-              <p class="text-xs text-navy/40">Avr 2025 · 38 min</p>
+            <div class="flex items-center gap-2 text-navy/45 text-xs">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Durée : environ 2h
             </div>
+            <a href="evenements.html" class="ml-auto inline-flex items-center gap-1.5 text-gold text-xs font-medium hover:underline">
+              Tous les événements →
+            </a>
           </div>
         </div>
-      </div>
-
-      <!-- Notes & Études -->
-      <div class="pillar-card bg-white border border-navy/8 rounded-2xl p-7 fade-up" style="transition-delay:0.1s">
-        <div class="w-11 h-11 rounded-xl bg-gold-faint flex items-center justify-center mb-5">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-            <line x1="16" y1="13" x2="8" y2="13"/>
-            <line x1="16" y1="17" x2="8" y2="17"/>
-            <polyline points="10 9 9 9 8 9"/>
-          </svg>
-        </div>
-        <h3 class="font-serif text-lg font-semibold text-navy mb-2">Notes & Études</h3>
-        <p class="text-navy/55 text-sm font-light leading-relaxed mb-5">Télécharge les plans d'études et fiches de la cellule pour approfondir par toi-même.</p>
-        <a href="#contact" class="inline-block text-xs font-medium text-gold border border-gold/30 px-4 py-2 rounded-full hover:bg-gold-faint transition-colors">
-          Accéder aux ressources →
-        </a>
-      </div>
-
-      <!-- Demandes de prière -->
-      <div class="pillar-card bg-navy border border-gold/20 rounded-2xl p-7 fade-up" style="transition-delay:0.2s">
-        <div class="w-11 h-11 rounded-xl bg-gold/10 flex items-center justify-center mb-5">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-          </svg>
-        </div>
-        <h3 class="font-serif text-lg font-semibold text-gold mb-2">Demandes de prière</h3>
-        <p class="text-white/55 text-sm font-light leading-relaxed mb-5">Tu traverses quelque chose ? Envoie-nous ta demande — nous prions pour chaque membre de la cellule.</p>
-        <a href="#contact" class="inline-block text-xs font-medium text-gold border border-gold/30 px-4 py-2 rounded-full hover:bg-gold/10 transition-colors">
-          Soumettre une demande →
-        </a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     RÉSEAUX SOCIAUX
-════════════════════════════════════════ -->
+<!-- ══════════════════════════════ VERSET + RÉSEAUX ══════════════════════════════ -->
 <section class="py-20 px-6 bg-navy">
-  <div class="max-w-4xl mx-auto text-center fade-up">
+  <div class="max-w-4xl mx-auto">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
 
-    <p class="text-gold text-xs tracking-widest uppercase mb-4">
-      <span class="gold-line"></span>Communauté en ligne
-    </p>
-    <h2 class="font-serif text-3xl md:text-4xl font-semibold text-white mb-4">
-      Suis-nous sur les réseaux
+      <!-- Verset fondateur -->
+      <div class="fade-up">
+        <p class="section-label"><span class="gold-line"></span>Notre fondement</p>
+        <blockquote class="border-l-2 border-gold pl-6 mt-2">
+          <p class="font-serif text-2xl md:text-3xl italic text-white/85 leading-relaxed mb-4">
+            « Voici, je vous ai donné le pouvoir de fouler aux pieds serpents et scorpions, et toute la puissance de l'ennemi ; et rien ne pourra vous nuire. »
+          </p>
+          <cite class="text-gold text-sm not-italic font-medium tracking-wide">Luc 10:19</cite>
+        </blockquote>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="fade-up" style="transition-delay:0.1s">
+        <p class="section-label"><span class="gold-line"></span>Communauté en ligne</p>
+        <h3 class="font-serif text-2xl font-semibold text-white mt-2 mb-2">Suis-nous sur les réseaux</h3>
+        <p class="text-white/40 font-light text-sm mb-6">Versets, encouragements et annonces — chaque semaine.</p>
+        <div class="flex flex-col gap-3">
+
+          <a href="https://www.facebook.com/cellulexousia" target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-3 bg-white/5 border border-white/10 hover:border-gold/40 hover:bg-gold/5 transition-all duration-200 rounded-2xl px-5 py-4 group">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#D4AC60"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            <div class="flex-1">
+              <p class="text-white text-sm font-medium group-hover:text-gold transition-colors">Facebook</p>
+              <p class="text-white/30 text-xs">facebook.com/cellulexousia</p>
+            </div>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-gold transition-colors">
+              <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/cellulexousia/" target="_blank" rel="noopener noreferrer"
+             class="flex items-center gap-3 bg-white/5 border border-white/10 hover:border-gold/40 hover:bg-gold/5 transition-all duration-200 rounded-2xl px-5 py-4 group">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+            <div class="flex-1">
+              <p class="text-white text-sm font-medium group-hover:text-gold transition-colors">Instagram</p>
+              <p class="text-white/30 text-xs">instagram.com/cellulexousia</p>
+            </div>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.25)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:stroke-gold transition-colors">
+              <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════ CTA FINAL ══════════════════════════════ -->
+<section class="py-20 px-6 bg-cream text-center fade-up">
+  <div class="max-w-xl mx-auto">
+    <div class="inline-block text-gold text-3xl mb-4 font-serif">✦</div>
+    <h2 class="font-serif text-4xl md:text-5xl font-semibold text-navy mb-4">
+      Prêt(e) à nous rejoindre ?
     </h2>
-    <p class="text-white/45 font-light mb-10 max-w-md mx-auto">
-      Des encouragements, des versets, des annonces — chaque semaine sur Facebook et Instagram.
+    <p class="text-navy/50 font-light leading-relaxed mb-8">
+      Pas de jugement, juste de l'amour. La porte est ouverte — viens comme tu es.
     </p>
-
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-
-      <!-- Facebook -->
-      <a href="https://www.facebook.com/cellulexousia"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="flex items-center gap-3 bg-white/5 border border-white/10 hover:border-gold/40 hover:bg-gold/5 transition-all duration-200 rounded-2xl px-7 py-4 group w-full sm:w-auto">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="#D4AC60">
-          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-        </svg>
-        <div class="text-left">
-          <p class="text-white text-sm font-medium group-hover:text-gold transition-colors">Facebook</p>
-          <p class="text-white/35 text-xs">@cellulexousia</p>
-        </div>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-auto group-hover:stroke-gold transition-colors">
-          <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
-        </svg>
-      </a>
-
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/cellulexousia/"
-         target="_blank"
-         rel="noopener noreferrer"
-         class="flex items-center gap-3 bg-white/5 border border-white/10 hover:border-gold/40 hover:bg-gold/5 transition-all duration-200 rounded-2xl px-7 py-4 group w-full sm:w-auto">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-        </svg>
-        <div class="text-left">
-          <p class="text-white text-sm font-medium group-hover:text-gold transition-colors">Instagram</p>
-          <p class="text-white/35 text-xs">@cellulexousia</p>
-        </div>
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-auto group-hover:stroke-gold transition-colors">
-          <line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/>
-        </svg>
-      </a>
-    </div>
+    <a href="contact.html" class="btn-primary text-sm px-10 py-4">
+      Écrire à la cellule
+    </a>
   </div>
 </section>
 
-<!-- ═══════════════════════════════════════
-     CONTACT / REJOINDRE
-════════════════════════════════════════ -->
-<section id="contact" class="py-24 px-6 bg-cream">
-  <div class="max-w-2xl mx-auto">
-
-    <div class="text-center mb-12 fade-up">
-      <p class="text-gold text-xs tracking-widest uppercase mb-3">
-        <span class="gold-line"></span>Nous rejoindre
-      </p>
-      <h2 class="font-serif text-4xl md:text-5xl font-semibold text-navy mb-4">
-        Tu es attendu(e)
-      </h2>
-      <p class="text-navy/50 font-light leading-relaxed">
-        Que tu cherches une communauté chrétienne, que tu aies des questions sur la foi, ou simplement envie de voir — écris-nous. Pas de jugement, juste de l'amour.
-      </p>
-    </div>
-
-    <!-- Formulaire -->
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field"
-          class="bg-white border border-navy/8 rounded-2xl p-8 md:p-10 fade-up space-y-5">
-
-      <!-- Champ honeypot anti-spam (Netlify) -->
-      <input type="hidden" name="form-name" value="contact" />
-      <p class="hidden"><label>Ne pas remplir : <input name="bot-field" /></label></p>
-
-      <div class="grid sm:grid-cols-2 gap-5">
-        <div>
-          <label class="block text-xs font-medium text-navy/60 uppercase tracking-wide mb-2">Prénom</label>
-          <input type="text" name="prenom" required placeholder="Gabriel"
-                 class="w-full border border-navy/15 rounded-xl px-4 py-3 text-sm text-navy placeholder-navy/30 bg-cream/50 transition-all" />
-        </div>
-        <div>
-          <label class="block text-xs font-medium text-navy/60 uppercase tracking-wide mb-2">Nom</label>
-          <input type="text" name="nom" placeholder="Dubois"
-                 class="w-full border border-navy/15 rounded-xl px-4 py-3 text-sm text-navy placeholder-navy/30 bg-cream/50 transition-all" />
-        </div>
-      </div>
-
-      <div>
-        <label class="block text-xs font-medium text-navy/60 uppercase tracking-wide mb-2">Email</label>
-        <input type="email" name="email" required placeholder="gabriel@email.com"
-               class="w-full border border-navy/15 rounded-xl px-4 py-3 text-sm text-navy placeholder-navy/30 bg-cream/50 transition-all" />
-      </div>
-
-      <div>
-        <label class="block text-xs font-medium text-navy/60 uppercase tracking-wide mb-2">Tu souhaites…</label>
-        <select name="sujet" class="w-full border border-navy/15 rounded-xl px-4 py-3 text-sm text-navy bg-cream/50 transition-all appearance-none">
-          <option value="">Choisir une option…</option>
-          <option value="rejoindre">Rejoindre la cellule</option>
-          <option value="visiter">Venir visiter une réunion</option>
-          <option value="priere">Soumettre une demande de prière</option>
-          <option value="question">Poser une question sur la foi</option>
-          <option value="autre">Autre</option>
-        </select>
-      </div>
-
-      <div>
-        <label class="block text-xs font-medium text-navy/60 uppercase tracking-wide mb-2">Message</label>
-        <textarea name="message" rows="4" placeholder="Dis-nous quelques mots sur toi ou ta demande…"
-                  class="w-full border border-navy/15 rounded-xl px-4 py-3 text-sm text-navy placeholder-navy/30 bg-cream/50 resize-none transition-all"></textarea>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <input type="checkbox" id="consent" name="consent" required class="w-4 h-4 accent-gold" />
-        <label for="consent" class="text-xs text-navy/45 leading-relaxed">
-          J'accepte que mes données soient utilisées uniquement pour répondre à ma demande.
-        </label>
-      </div>
-
-      <button type="submit"
-              class="w-full bg-navy text-white font-medium text-sm py-4 rounded-full hover:bg-navy-light transition-colors duration-200 flex items-center justify-center gap-2">
-        Envoyer le message
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
-        </svg>
-      </button>
-    </form>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
-     FOOTER
-════════════════════════════════════════ -->
-<footer class="bg-navy pt-16 pb-8 px-6">
+<!-- ══════════════════════════════ FOOTER ══════════════════════════════ -->
+<footer class="bg-navy pt-14 pb-8 px-6">
   <div class="max-w-6xl mx-auto">
-
-    <!-- Top footer -->
-    <div class="grid md:grid-cols-4 gap-12 pb-12 border-b border-white/8">
+    <div class="grid md:grid-cols-4 gap-10 pb-10 border-b border-white/8">
 
       <!-- Brand -->
       <div>
         <p class="font-serif text-2xl text-gold mb-3">✦ Exousia</p>
-        <p class="text-white/40 text-sm font-light leading-relaxed mb-5">
+        <p class="text-white/35 text-sm font-light leading-relaxed mb-5">
           Une cellule chrétienne d'impact à Strasbourg. Ancrée dans la Parole, ouverte à tous.
         </p>
         <div class="flex gap-3">
           <a href="https://www.facebook.com/cellulexousia" target="_blank" rel="noopener noreferrer"
              class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:border-gold/40 transition-colors">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="#D4AC60">
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-            </svg>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="#D4AC60"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
           </a>
           <a href="https://www.instagram.com/cellulexousia/" target="_blank" rel="noopener noreferrer"
              class="w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center hover:border-gold/40 transition-colors">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#D4AC60" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
             </svg>
           </a>
         </div>
       </div>
 
-      <!-- Liens rapides -->
+      <!-- Liens -->
       <div>
-        <p class="text-white/30 text-xs uppercase tracking-widest mb-4">Navigation</p>
+        <p class="text-white/25 text-xs uppercase tracking-widest mb-4">Navigation</p>
         <ul class="space-y-2.5">
-          <li><a href="#vision"     class="text-white/55 text-sm hover:text-gold transition-colors">Vision & Identité</a></li>
-          <li><a href="#evenements" class="text-white/55 text-sm hover:text-gold transition-colors">Événements</a></li>
-          <li><a href="#ressources" class="text-white/55 text-sm hover:text-gold transition-colors">Ressources</a></li>
-          <li><a href="#contact"    class="text-white/55 text-sm hover:text-gold transition-colors">Contact & Rejoindre</a></li>
+          <li><a href="vision.html"      class="text-white/50 text-sm hover:text-gold transition-colors">Vision & Identité</a></li>
+          <li><a href="evenements.html"  class="text-white/50 text-sm hover:text-gold transition-colors">Événements</a></li>
+          <li><a href="ressources.html"  class="text-white/50 text-sm hover:text-gold transition-colors">Ressources</a></li>
+          <li><a href="contact.html"     class="text-white/50 text-sm hover:text-gold transition-colors">Contact & Rejoindre</a></li>
         </ul>
       </div>
       <!-- Liens utiles -->
@@ -616,26 +387,23 @@
 
       <!-- Verset -->
       <div>
-        <p class="text-white/30 text-xs uppercase tracking-widest mb-4">Notre fondement</p>
-        <blockquote class="border-l border-gold/40 pl-4">
-          <p class="font-serif italic text-white/60 text-sm leading-relaxed mb-2">
+        <p class="text-white/25 text-xs uppercase tracking-widest mb-4">Notre fondement</p>
+        <blockquote class="border-l border-gold/35 pl-4">
+          <p class="font-serif italic text-white/55 text-sm leading-relaxed mb-2">
             « Je vous ai donné le pouvoir de fouler aux pieds serpents et scorpions, et toute la puissance de l'ennemi. »
           </p>
-          <cite class="text-gold/60 text-xs not-italic">— Luc 10:19</cite>
+          <cite class="text-gold/55 text-xs not-italic">— Luc 10:19</cite>
         </blockquote>
       </div>
     </div>
 
-    <!-- Bottom footer -->
-    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-3 text-white/25 text-xs">
+    <div class="pt-8 flex flex-col md:flex-row items-center justify-between gap-3 text-white/20 text-xs">
       <p>© 2026 Cellule Exousia · Loveworld Strasbourg, France</p>
       <p>Fait avec foi, pour l'impact éternel</p>
     </div>
   </div>
 </footer>
 
-<!-- JS partagé -->
 <script src="assets/main.js"></script>
-
 </body>
 </html>
